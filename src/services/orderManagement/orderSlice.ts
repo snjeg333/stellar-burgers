@@ -8,7 +8,7 @@ interface ManagementState {
   error: string | null;
 }
 
-const initialState: ManagementState = {
+export const initialState: ManagementState = {
   isOrderRequesting: false,
   currentOrderData: null,
   error: null

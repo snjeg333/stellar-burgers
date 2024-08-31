@@ -8,7 +8,7 @@ import {
   updateUser
 } from './authActions';
 
-interface UserState {
+export interface UserState {
   user: TUser | null;
   userOrderList: TOrder[];
   isAuthChecked: boolean;
@@ -16,7 +16,7 @@ interface UserState {
   error: string | null;
 }
 
-const initialState: UserState = {
+export const initialState: UserState = {
   user: null,
   userOrderList: [],
   isAuthChecked: false,

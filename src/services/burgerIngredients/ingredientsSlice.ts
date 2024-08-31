@@ -7,7 +7,7 @@ interface IngredientsState {
   loadingData: boolean;
 }
 
-const initialState: IngredientsState = {
+export const initialState: IngredientsState = {
   ingredients: [],
   loadingData: false
 };

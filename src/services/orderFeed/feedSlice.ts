@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 import { fetchFeed, fetchOrderByNumber } from './feedActions';
 
-interface FeedState {
+export interface FeedState {
   orders: TOrder[];
   total: number;
   totalToday: number;
@@ -10,7 +10,7 @@ interface FeedState {
   previewOrder: TOrder | null;
 }
 
-const initialState: FeedState = {
+export const initialState: FeedState = {
   orders: [],
   total: 0,
   totalToday: 0,
