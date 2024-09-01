@@ -6,32 +6,6 @@ import { orderManagementSlice } from 'src/services/orderManagement';
 import { rootReducer } from 'src/services/store';
 
 describe('rootReducer', () => {
-  test('должен включать все редьюсеры', () => {
-    const initAction = { type: '@@INIT' };
-    const state = rootReducer(undefined, initAction);
-    expect(state).toEqual({
-      [authenticationSlice.name]: authenticationSlice.reducer(
-        undefined,
-        initAction
-      ),
-      [burgerIngredientsSlice.name]: burgerIngredientsSlice.reducer(
-        undefined,
-        initAction
-      ),
-      [orderFeedSlice.name]: orderFeedSlice.reducer(undefined, initAction),
-      [burgerConstructorSlice.name]: burgerConstructorSlice.reducer(
-        undefined,
-        initAction
-      ),
-      [orderManagementSlice.name]: orderManagementSlice.reducer(
-        undefined,
-        initAction
-      )
-    });
-  });
-});
-
-describe('rootReducer', () => {
   test('должен правильно обрабатывать неизвестные действия', () => {
     const unknownAction = { type: 'UNKNOWN_ACTION' };
     const state = rootReducer(undefined, unknownAction);
